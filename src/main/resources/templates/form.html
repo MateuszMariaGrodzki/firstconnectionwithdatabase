@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="container">
+    <!--
+    action mowi gdzie ma przejsc po klikniecu przycisku
+    protokol HTTP = ADRES URL + METODA HTTP
+    METHOD = POST : parametry nie beda widoczne w adresie URL
+    METHOD = GET : parametry beda widoczne w adresie URL
+    -->
+
+    <form action="/users" method="post">
+        <div class="form-group">
+
+            <!--
+            name to jest odpowiednik nazwy zmiennej w Javie dla HTML
+            name = email
+            podobnie jakbysmy w javie utworzyli zmienna String email
+            zmienna w protokole HTTp nazywa sie parametr
+            -->
+
+            <label for="exampleInputEmail1">Email address</label>
+            <input name="email" required type="email" class="form-control input-small" id="exampleInputEmail1"
+                   placeholder="Email">
+        </div>
+        <!--
+        tworzymy parametr o nazwie email
+        input odpowednik Scannera, to co wpisze uzytkownik laduje do naszej zmiennej
+        -->
+        <div class="form-group">
+            <label for="exampleInputPassword1">Name</label>
+            <input name = "name" required type="text" class="form-control input-small" id="exampleInputPassword1"
+                   placeholder="Name">
+        <!--
+        tworzymy parametr o nazwie name
+        -->
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg ">Dodaj</button>
+    </form>
+</div>
+
+
+</body>
+</html>
